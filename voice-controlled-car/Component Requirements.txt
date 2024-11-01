@@ -1,0 +1,48 @@
+### Component Requirements
+
+1. Microcontroller: 
+   - Arduino Uno or Mega
+
+2. Servo Motors: 
+   - 4-6 servos depending on the degrees of freedom required
+
+3. Motor Driver: 
+   - L298N motor driver or similar
+
+4. Power Supply: 
+   - Battery pack or DC power supply (ensure adequate power for servos and Arduino)
+
+5. Structural Components: 
+   - Aluminium or plastic frame for base for car
+
+6. Sensors: 
+   - IR or ultrasonic sensors for obstacle detection (optional)
+
+7. Wires and Connectors: 
+   - Jumper wires, connectors, and soldering materials
+
+8. Bluetooth Module:
+   - HC05
+
+### Software Requirements
+
+1. Arduino IDE:
+   - For programming the Arduino board
+
+2. Libraries:
+   - Servo.h: For controlling the servo motors
+   - Wire.h: For I2C communication if using I2C devices
+
+3. Mobile Application:
+   - Arduino Bluetooth Control https://play.google.com/store/apps/details?id=com.giristudio.hc05.bluetooth.arduino.control
+
+6. Computer:
+   - A computer to run the image processing software and send commands to Arduino
+
+### Additional Tools and Resources
+
+1. Debugging Tools:
+   - Multimeter, oscilloscope, etc., for troubleshooting
+
+
+
