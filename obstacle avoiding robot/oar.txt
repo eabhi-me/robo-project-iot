@@ -1,0 +1,9 @@
+The OAR bot uses three ultrasonic sensors positioned on the front, left, and right faces to detect and avoid obstacles. When an obstacle is detected in the front, it decides to turn based on readings from the left and right sensors, helping it navigate around objects.
+
+Code Walkthrough
+
+Distance Measurement: Each sensor measures the distance to obstacles and sends the readings to the bot.
+Motor Control: The bot moves forward when the front path is clear. If an obstacle is detected in front, it stops and checks the left and right distances, choosing the direction with the most space.
+Turning: The bot turns left or right as needed to avoid obstacles, with a brief delay to complete the turn before continuing.
+Running the Code
+Upload this code to your Arduino. Watch as the bot moves forward and navigates around objects based on the sensor readings.

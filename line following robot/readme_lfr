@@ -1,0 +1,34 @@
+Overview
+This project is a line-following robot built using an Arduino and a five-sensor IR array. The robot reads signals from 
+the array to detect and follow a line, making real-time decisions to adjust its direction.
+
+Code Walkthrough
+
+1. Motor Pin Setup: The four motor control pins drive the two motors: LEFT_MOTOR_FORWARD, LEFT_MOTOR_BACKWARD, 
+   RIGHT_MOTOR_FORWARD, and RIGHT_MOTOR_BACKWARD. They are connected to PWM pins to control speed.
+
+2. IR Sensor Setup: Each IR sensor reads analog values from the line beneath the robot. The sensors are arranged 
+   as an array (ir[]), representing positions from left (IR1) to right (IR5).
+
+3. Main Loop:
+   - The robot continuously reads the values from each IR sensor.
+   - Based on sensor readings, the robot decides its movement:
+     - Straight: When only the middle sensor (IR3) detects the line.
+     - Slight Turns: When IR2 or IR4 partially detect the line, indicating the need for a slight adjustment.
+     - Hard Turns: When the line is under IR1 or IR5, the robot turns sharply to return to the line.
+     - Stop: If no sensors detect the line, the robot halts.
+
+4. Movement Functions:
+   - Functions moveForward, slightLeft, slightRight, hardLeft, and hardRight adjust motor speed and direction based 
+     on sensor readings.
+   - stopMotors halts all motors when no line is detected.
+
+Running the Code
+1. Setup: Connect each motor to the corresponding motor driver pins on the Arduino. Attach each IR sensor to the 
+   respective analog input pins.
+2. Adjust: Test on a track. You may tweak the sensor threshold or motor speeds in the moveForward and turn functions 
+   for smoother operation.
+
+This code is a starting point and can be tuned for different track shapes or to handle intersections.
+
+
